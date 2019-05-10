@@ -1,0 +1,70 @@
+// head {
+@import "../../../../modules-vendor/fed/css/std/-/less/main.less";
+
+@__nodeId__: ~"std_ui_layer__main";
+// }
+
+.@{__nodeId__} {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 20000;
+
+    > .container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        > .wrapper {
+            padding: 20px;
+            background-color: #FFF;
+
+            border-radius: 4px;
+
+            > .content_container {
+
+            }
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        background-color: #C4FFB5;
+
+        > .container {
+
+            > .close_button {
+                cursor: pointer;
+                position: absolute;
+                right: 30px;
+                top: 30px;
+                width: 64px;
+                height: 64px;
+                background: url("images/close64.png");
+                opacity: 0.3;
+                z-index: 15000;
+
+                &:hover {
+                    opacity: 0.6;
+                }
+            }
+
+            > .wrapper {
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                overflow: auto;
+
+                > .content_container {
+
+                }
+            }
+        }
+    }
+}
